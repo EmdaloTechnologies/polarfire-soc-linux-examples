@@ -400,7 +400,7 @@ int main(void)
 	 * Performs CAN Initialization and Message Buffer Configuration
 	 */
 	/* ----------------------- CAN - 0 Initialization   ----------------- */
-	init_return_value = MSS_CAN_init(g_mss_can_0, CAN_SPEED_8M_250K, (pmss_can_config_reg)0, 6u, 6u);
+	init_return_value = MSS_CAN_init(g_mss_can_0, CAN_SPEED_8M_1M, (pmss_can_config_reg)0, 6u, 6u);
 	if ((init_return_value != CAN_OK) && (init_return_value != CAN_BASIC_CAN_MAILBOX)) {
 		fprintf(stderr, "can 0 failed to init ok\n");
 		exit(0);
@@ -412,7 +412,7 @@ int main(void)
 
 
 	/* ----------------------- CAN - 1 Initialization   ----------------- */
-	init_return_value = MSS_CAN_init(g_mss_can_1, CAN_SPEED_8M_250K, (pmss_can_config_reg)0, 6u, 6u);
+	init_return_value = MSS_CAN_init(g_mss_can_1, CAN_SPEED_8M_1M, (pmss_can_config_reg)0, 6u, 6u);
 	if ((init_return_value != CAN_OK) && (init_return_value != CAN_BASIC_CAN_MAILBOX)) {
 		fprintf(stderr, "can 1 failed to init ok\n");
 		exit(0);
